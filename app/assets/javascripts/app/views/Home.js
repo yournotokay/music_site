@@ -1,5 +1,4 @@
 BobbyMusic.app.views.Home = Backbone.View.extend({
-  el: 'body',
   template: HandlebarsTemplates.home,
 
   render: function() {
