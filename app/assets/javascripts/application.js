@@ -16,6 +16,7 @@
 //= require underscore
 //= require backbone
 //= require handlebars
+//= require flowplayer-3.2.12.min
 //= require ./app
 //= require_tree ./app/templates
 //= require_tree ./app/models

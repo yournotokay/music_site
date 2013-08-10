@@ -2,8 +2,8 @@
   <ul class="music-list">
     {{#each music}}
     <li>
-      <span>{{this.file}}:</span>
-      <a class="play" href="{{this.url}}">Play</a>
+      <span>{{this.file}}</span>
+      <a id="{{this.file}}" href="{{this.url}}"></a>
       <div class='clear'></div>
     </li>
     {{/each}}

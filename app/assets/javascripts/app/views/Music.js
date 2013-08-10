@@ -12,8 +12,31 @@ BobbyMusic.app.views.Music = Backbone.View.extend({
   },
 
   render: function() {
-    console.log(this.collection.toJSON());
     this.$el.html(this.template({music: this.collection.toJSON()}));
+    this._loadPlayers(this.collection.toJSON());
     return this;
+  },
+
+  _loadPlayers: function(musicList) {
+    $(".music a").flowplayer("http://releases.flowplayer.org/swf/flowplayer-3.2.5.swf",{
+
+      onError: function(e)
+      {
+          alert("Error: (code:"+e+").");
+      },
+
+      plugins: {
+        controls: {
+          fullscreen: false,
+          height: 30,
+          autoHide: false
+        }
+      },
+
+      clip: {
+        autoPlay: false
+      }
+    });
+    $(".music a").click();
   }
 });
