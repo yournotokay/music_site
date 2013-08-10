@@ -9,7 +9,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  */
 
-@import "bootstrap";
 @import "compass";
+@import "compass/reset";
+
+@import "bootstrap";
 
 @import "layout";
+@import "music";

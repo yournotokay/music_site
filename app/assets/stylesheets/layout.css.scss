@@ -8,12 +8,15 @@ body {
   background-color: black;
 
   .centered-area {
-    opacity: auto;
+    background-height: 1024px;
     width: 720px;
+    min-height: 1024px;
     margin: auto;
+    padding: 0;
     text-align: center;
 
     .header {
+
       img {
         height: 115px;
       }
@@ -36,11 +39,12 @@ body {
 
             a {
               display: block;
-              color: #8B0000;
+              color: #B51111;
               margin: 0px;
-              padding: 0px;
+              padding: 10px 0px;
               font-size: 22px;
-              font-family: fantasy, comic sans ms, arial;
+              font-family: comic sans ms, arial;
+              font-weight: bold;
               text-decoration:none;
 
               &:hover, &:active {
@@ -58,6 +62,7 @@ body {
   }
 
   .content-body {
+    background-color: #111;
     color: #6F6F6F;
   }
 
@@ -70,5 +75,6 @@ body {
     left:0px;
     right:0px;
     margin: 0;
+    padding: 0;
   }
 }
