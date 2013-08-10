@@ -1,0 +1,28 @@
+.music {
+  ul {
+    padding: 20px;
+  }
+
+  li {
+    margin: 15px 0;
+    font-size: 17px;
+
+    span {
+      @include inline-block;
+      float: left;
+    }
+
+    a {
+      float: right;
+      width: 200px;
+      @include inline-block;
+      text-decoration:none;
+      color: #B51111;
+
+      &:hover, &:active {
+        @include background-image(linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.05) 100%));
+      }
+
+    }
+  }
+}

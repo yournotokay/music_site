@@ -19,4 +19,5 @@
 //= require ./app
 //= require_tree ./app/templates
 //= require_tree ./app/models
+//= require_tree ./app/collections
 //= require_tree .

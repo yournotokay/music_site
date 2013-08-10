@@ -28,6 +28,7 @@ body {
           margin-bottom: 40px;
 
           li {
+            margin: 10px 0;
             display: block;
             float: left;
             width: 25%;
@@ -63,4 +64,13 @@ body {
     background-color: #111;
     color: #6F6F6F;
   }
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.clear {
+  clear:both;
 }
