@@ -1,7 +1,5 @@
-@import "compass/css3";
-
 body {
-  background-image: url('photoshop-textures-diamond-background-monochrome.jpg');
+  background-image: url('background.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -10,7 +8,6 @@ body {
   .centered-area {
     background-height: 1024px;
     width: 720px;
-    min-height: 1024px;
     margin: auto;
     padding: 0;
     text-align: center;
@@ -35,7 +32,7 @@ body {
             float: left;
             width: 25%;
             margin-right: -1px;
-            border-right: 1px solid #2E2E2E;
+            border-right: 1px solid #202020;
 
             a {
               display: block;
@@ -48,7 +45,7 @@ body {
               text-decoration:none;
 
               &:hover, &:active {
-                @include background-image(linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.25) 100%));
+                @include background-image(linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0.05) 100%));
               }
             }
 
@@ -62,19 +59,8 @@ body {
   }
 
   .content-body {
+    @include border-radius(10px);
     background-color: #111;
     color: #6F6F6F;
-  }
-
-  .darker-hack {
-    background-color: black;
-    opacity: 0.65;
-    position:fixed;
-    top:0px;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    margin: 0;
-    padding: 0;
   }
 }
