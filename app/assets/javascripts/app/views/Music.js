@@ -34,8 +34,19 @@ BobbyMusic.app.views.Music = Backbone.View.extend({
       },
 
       clip: {
-        autoPlay: false
-      }
+        autoPlay: false,
+        // optional: when playback starts close the first audio playback
+        onStart: function() {
+          debugger
+        },
+
+        onBegin: function() {
+          debugger
+        }
+      },
+        onStart: function() {
+          debugger
+        }
     });
     $(".music a").click();
   }
