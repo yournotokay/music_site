@@ -63,6 +63,7 @@ body {
       .main-content {
         @include border-radius(10px);
         background-color: #111;
+        padding: 20px;
       }
     }
 
