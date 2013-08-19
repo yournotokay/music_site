@@ -63,6 +63,7 @@ body {
     @include border-radius(10px);
     background-color: #111;
     color: $text-and-links;
+    overflow: hidden;
   }
 }
 
