@@ -1,12 +1,11 @@
 body {
+  background-color: black;
   background-image: url('background.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: center;
-  background-color: black;
+  min-width: 720px;
 
   .centered-area {
-    background-height: 1024px;
     width: 720px;
     margin: auto;
     padding: 0;
@@ -25,7 +24,6 @@ body {
           content: " ";
           list-style: none;
           width: 100%;
-          margin-bottom: 40px;
 
           li {
             display: block;
@@ -57,21 +55,24 @@ body {
         }
       }
     }
+
+    .content-body {
+      color: $text-and-links;
+      overflow: hidden;
+
+      .main-content {
+        @include border-radius(10px);
+        background-color: #111;
+      }
+    }
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    .clear {
+      clear:both;
+    }
   }
-
-  .content-body {
-    @include border-radius(10px);
-    background-color: #111;
-    color: $text-and-links;
-    overflow: hidden;
-  }
-}
-
-ul, li {
-  margin: 0;
-  padding: 0;
-}
-
-.clear {
-  clear:both;
 }
