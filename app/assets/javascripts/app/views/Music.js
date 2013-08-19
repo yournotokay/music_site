@@ -18,7 +18,8 @@ BobbyMusic.app.views.Music = Backbone.View.extend({
   },
 
   _loadPlayers: function(musicList) {
-    $(".music a").flowplayer("http://releases.flowplayer.org/swf/flowplayer-3.2.5.swf",{
+    self = this;
+    this.$('a').flowplayer("http://releases.flowplayer.org/swf/flowplayer-3.2.5.swf",{
 
       onError: function(e)
       {
@@ -35,19 +36,23 @@ BobbyMusic.app.views.Music = Backbone.View.extend({
 
       clip: {
         autoPlay: false,
-        // optional: when playback starts close the first audio playback
-        onStart: function() {
-          debugger
-        },
-
-        onBegin: function() {
-          debugger
-        }
       },
-        onStart: function() {
-          debugger
-        }
+
+      onStart: function() {
+        self._stopOtherPlayers(this);
+      },
+
+      onResume: function() {
+        self._stopOtherPlayers(this);
+      }
     });
-    $(".music a").click();
+  },
+
+  _stopOtherPlayers: function(currentPlayer) {
+    this.$('a').flowplayer().each(function() {
+      if(this != currentPlayer) {
+        this.pause();
+      }
+    });
   }
 });

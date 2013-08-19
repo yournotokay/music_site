@@ -12,7 +12,6 @@ body {
     text-align: center;
 
     .header {
-
       img {
         height: 115px;
         opacity: 0.75;
@@ -59,12 +58,19 @@ body {
     .content-body {
       color: $text-and-links;
       overflow: hidden;
+      min-height: 480px;
 
       .main-content {
         @include border-radius(10px);
         background-color: #111;
         padding: 20px;
       }
+    }
+
+    .footer {
+      margin: 20px;
+      text-align: left;
+      font-size: 11px;
     }
 
     ul, li {
