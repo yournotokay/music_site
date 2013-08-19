@@ -1,0 +1,34 @@
+.about {
+  .images {
+    float: left;
+    width: 33%;
+
+    .image {
+      padding: 20px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .text-content {
+    text-align: left;
+    float: right;
+    width: 66%;
+
+    .text {
+      padding: 20px;
+
+      .resume {
+        margin-top: 30px;
+        font-size: 12pt;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
