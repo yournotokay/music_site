@@ -1,29 +1,37 @@
 .music {
-  ul {
-    padding: 20px;
-  }
-
-  li {
-    margin: 15px 0;
+  .section-list .section {
     font-size: 17px;
 
-    span {
-      line-height: 30px;
-      @include inline-block;
-      float: left;
+    h3 {
+      margin: 0;
     }
 
-    a {
-      float: right;
-      display:block;
-      width:300px;
-      height:30px;
-      border: 1px solid black;
+    .music-list .song {
+      margin: 15px 0;
 
-      &:hover {
-        border: 1px solid $text-and-links;
+      .title {
+        line-height: 30px;
+        @include inline-block;
+        float: left;
       }
 
+      a.player {
+        float: right;
+        margin-right: 120px;
+        width:300px;
+        height:30px;
+        border: 1px solid black;
+
+        &:hover {
+          border: 1px solid $text-and-links;
+        }
+      }
+
+      .description {
+        padding: 10px;
+        font-size: 12px;
+        text-align: left;
+      }
     }
   }
 }

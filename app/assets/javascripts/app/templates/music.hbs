@@ -1,10 +1,20 @@
 <div class="music main-content">
-  <ul class="music-list">
-    {{#each music}}
-    <li>
-      <span>{{this.file}}</span>
-      <a id="{{this.file}}" href="{{this.url}}"></a>
-      <div class='clear'></div>
+  <ul class="section-list">
+    {{#each sections}}
+    <li class='section'>
+      <h3>{{@key}}</h3>
+
+      <ul class="music-list">
+        {{#each this}}
+        <li class="song">
+          <span class="title">{{this.title}}</span>
+          <a class="player" href="{{this.url}}"></a>
+          <div class='clear'></div>
+          <p class="description">{{this.description}}</span>
+        </li>
+        {{/each}}
+      </ul>
+
     </li>
     {{/each}}
   </ul>
