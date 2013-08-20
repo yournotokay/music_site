@@ -24,6 +24,14 @@ BobbyMusic.app.views.Music = Backbone.View.extend({
   },
 
   _loadPlayers: function() {
+    this.$(".player").mb_miniPlayer({
+      skin: 'red',
+      addShadow: true,
+      swfPath: "/assets/Jplayer.swf"
+    });
+  },
+
+  _mloadPlayers: function() {
     self = this;
     this.$('a').flowplayer("http://releases.flowplayer.org/swf/flowplayer-3.2.5.swf",{
 

@@ -8,7 +8,8 @@
         {{#each this}}
         <li class="song">
           <span class="title">{{this.title}}</span>
-          <a class="player" href="{{this.url}}"></a>
+          <a class="player" href="{{this.url}}">{{this.title}}</a>
+
           <div class='clear'></div>
           <p class="description">{{this.description}}</span>
         </li>

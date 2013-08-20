@@ -18,13 +18,10 @@
       a.player {
         float: right;
         margin-right: 120px;
-        width:300px;
-        height:30px;
-        border: 1px solid black;
+      }
 
-        &:hover {
-          border: 1px solid $text-and-links;
-        }
+      .mbMiniPlayer {
+        opacity: 0.8;
       }
 
       .description {
