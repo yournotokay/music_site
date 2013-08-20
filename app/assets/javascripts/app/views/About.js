@@ -13,6 +13,7 @@ BobbyMusic.app.views.About = Backbone.View.extend({
 
   render: function() {
     this.$el.html(this.template(this.model.toJSON()));
+    this.$('.main-content').show();
     return this;
   }
 });
