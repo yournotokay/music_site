@@ -6,14 +6,18 @@ BobbyMusic.app.views.About = Backbone.View.extend({
 
     _.bindAll(this, 'render');
 
-    this.listenTo(this.model, "reset sync", this.render);
+    this.listenTo(this.model, "sync", this.render);
 
     this.model.fetch();
   },
 
   render: function() {
-    this.$el.html(this.template(this.model.toJSON()));
-    this.$('.main-content').show();
+    var json = this.model.toJSON();
+    if(!$.isEmptyObject(json)) {
+      debugger
+      this.$el.html(this.template(json));
+      this.$('.main-content').show();
+    }
     return this;
   }
 });
