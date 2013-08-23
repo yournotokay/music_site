@@ -14,7 +14,6 @@ BobbyMusic.app.views.About = Backbone.View.extend({
   render: function() {
     var json = this.model.toJSON();
     if(!$.isEmptyObject(json)) {
-      debugger
       this.$el.html(this.template(json));
       this.$('.main-content').show();
     }

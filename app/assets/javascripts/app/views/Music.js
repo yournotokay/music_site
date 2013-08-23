@@ -28,7 +28,7 @@ BobbyMusic.app.views.Music = Backbone.View.extend({
 
   _loadPlayers: function() {
     this.$(".player").mb_miniPlayer({
-      skin: 'red',
+      skin: 'blue',
       addShadow: true,
       swfPath: "/assets/Jplayer.swf"
     });
