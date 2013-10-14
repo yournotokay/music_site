@@ -1,8 +1,5 @@
 body {
-  background-color: black;
-  background-image: url('background.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: $background;
   min-width: 720px;
 
   .centered-area {
@@ -13,6 +10,8 @@ body {
 
     .header {
       img {
+        margin-top: 20px;
+        margin-bottom: 30px;
         height: 115px;
         opacity: 0.75;
       }
@@ -72,6 +71,7 @@ body {
     }
 
     .footer {
+      color: $foreground;
       margin: 7px 7px 5px 0;
       text-align: right;
       font-size: 11px;
