@@ -37,6 +37,7 @@ module BobbyMusic
     config.assets.version = '1.0'
     config.assets.compress = false
     config.assets.debug = true
+    config.assets.digest = false
 
     HandlebarsAssets::Config.path_prefix = 'app/templates'
   end

@@ -1,12 +1,17 @@
 .about {
+  max-width: 750px;
   .images {
     float: left;
     width: 33%;
+    @media (max-width: 500px) {
+      display: none;
+    }
 
     .image {
       padding-bottom: 20px;
 
       img {
+        margin-top: 10px;
         width: 100%;
       }
 
@@ -23,16 +28,12 @@
 
     .text {
       padding-left: 40px;
+    }
+    @media (max-width: 500px) {
+      width: 100%;
 
-      .resume {
-        margin-top: 30px;
-        font-size: 12pt;
-        text-align: center;
-
-        a {
-          font-weight: bold;
-          font-size: 14pt;
-        }
+      .text {
+        padding: 0 10px;
       }
     }
   }

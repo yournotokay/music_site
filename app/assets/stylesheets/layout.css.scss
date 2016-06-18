@@ -1,76 +1,128 @@
 body {
-  background-color: $background;
-  min-width: 720px;
+  background-color: $foreground;
+  min-width: 320px;
 
-  .centered-area {
-    width: 720px;
-    margin: auto;
-    padding: 0;
+  .header {
+    @include background-image(linear-gradient($background, #2D2D46));
     text-align: center;
+    position: fixed;
+    width: 100%;
+    height: 57px;
+    z-index: 1;
 
-    .header {
-      img {
-        margin-top: 20px;
-        margin-bottom: 30px;
-        height: 115px;
-        opacity: 0.75;
+    img {
+      position: absolute;
+      left: 30px;
+      bottom: 10px;
+      width: 30%;
+      min-width: 230px;
+      max-width: 353px;
+    }
+
+    .composer {
+      left: 408px;
+      width: 130px;
+      bottom: 18px;
+      min-width: inherit;
+
+      @media (max-width: 1400px) {
+        display: none;
       }
+    }
 
-      .navbar {
-        ul {
-          display: table;
-          content: " ";
-          list-style: none;
-          width: 100%;
+    .navbar {
+      margin: 0;
 
-          li {
-            background-color: $foreground;
-            display: block;
-            float: left;
-            width: 33%;
-            border-right: 1px solid #777777;
+      ul {
+        display: inline-block;
 
-            &:first-of-type {
-              @include border-left-radius(10px);
-            }
+        @media (max-width: 800px) {
+          display: none;
+        }
 
-            &:last-of-type {
-              @include border-right-radius(10px);
-              border: none;
-            }
+        li {
+          display: inline-block;
+            margin: 24px 12px 0 12px;
 
-            a {
-              color: $copy;
-              display: block;
-              margin: 0px;
-              padding: 10px 0px;
-              font-size: 22px;
-              font-family: trebuchet ms, arial;
-              font-variant: small-caps;
-              font-weight: bold;
-              &:hover {
-                color: $link;
-              }
+          a {
+            color: $foreground;
+            text-decoration: none;
+            font-size: 19px;
+            font-family: trebuchet ms, arial;
+            font-variant: small-caps;
+            font-weight: bold;
+            &:hover {
+              color: $foreground;
             }
           }
         }
       }
     }
 
+    .icons {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      @include filter(grayscale(50%));
+
+      li {
+        display: inline-block;
+        margin: 0 5px;
+
+        .icon {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          margin: 0 5px;
+          @media (max-width: 400px) {
+            display: none;
+          }
+
+          &.imdb {
+            background-image: url('imdb.png');
+            vertical-align: middle;
+            margin-top: -16px;
+
+            @media (max-width: 460px) {
+              display: none;
+            }
+          }
+
+          &.soundcloud {
+            background-image: url('soundcloud.png');
+            vertical-align: super;
+            height: 30px;
+            width: 30px;
+          }
+
+          &.bandcamp {
+            background-image: url('bandcamp.png');
+          }
+        }
+      }
+    }
+  }
+
+  .centered-area {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0;
+    text-align: center;
+
     .content-body {
       color: $copy;
       overflow: hidden;
 
       .main-content {
-        display: none;
-        @include border-radius(10px);
-        background-color: $foreground;
         padding: 20px;
       }
     }
 
     .footer {
-      color: $foreground;
+      color: $copy;
       margin: 7px 7px 5px 0;
       text-align: right;
       font-size: 11px;

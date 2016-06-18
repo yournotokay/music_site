@@ -1,35 +1,11 @@
 .music {
-  .section-list {
-    font-size: 17px;
+  iframe {
+    width: 45%;
+    height: 450px;
+    margin: 10px;
 
-    h3 {
-      margin: 0;
-    }
-
-    hr:last-of-type {
-      display: none;
-    }
-
-    .music-list .song {
-      margin: 15px 0;
-
-      .title {
-        line-height: 30px;
-        @include inline-block;
-        float: left;
-      }
-
-      .mbMiniPlayer {
-        opacity: 0.3;
-        float: right;
-        margin-right: 120px;
-      }
-
-      .description {
-        padding: 10px;
-        font-size: 12px;
-        text-align: left;
-      }
+    @media (max-width: 800px) {
+      width: 90%;
     }
   }
 }
