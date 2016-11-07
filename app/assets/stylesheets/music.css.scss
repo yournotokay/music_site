@@ -1,11 +1,20 @@
 .music {
-  iframe {
+  .mplayer {
+    display: inline-block;
     width: 45%;
-    height: 450px;
-    margin: 10px;
-
     @media (max-width: 800px) {
       width: 90%;
     }
+
+    iframe {
+      width: 90%;
+      height: 450px;
+      margin: 10px;
+    }
+  }
+
+  img {
+    width: 25%;
+    margin: 0 10px;
   }
 }
